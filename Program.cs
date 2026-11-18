@@ -91,29 +91,37 @@
 //     if (i == 30) break;
 // }
 // Итоговая задача. «Угадайчисло»
-int a1 = Convert.ToInt32(Console.ReadLine());
-int j1 = 0;
-while (j1 < 6)
+// int a1 = Convert.ToInt32(Console.ReadLine());
+// int j1 = 0;
+// while (j1 < 6)
+// {
+//     if (a1 > 42)
+//     {
+//         Console.WriteLine("Загаданное число меньше!!!");
+//         j1++;
+//     }
+//     if (a1 < 42)
+//     {
+//         Console.WriteLine("Загаданное число больше!!!");
+//         j1++;
+//     }
+//     if (a1 == 42)
+//     {
+//         Console.WriteLine("Вы угадали число!!!!");
+//         break;
+//     }
+//     a1 = Convert.ToInt32(Console.ReadLine());
+// }
+// if (j1 == 6)
+// {
+//     Console.WriteLine("Попытки кончились.");
+// }
+// Дополнительное задание ★★★
+int z = Convert.ToInt32(Console.ReadLine());
+int y = 0;
+while (z > 0)
 {
-    if (a1 > 42)
-    {
-        Console.WriteLine("Загаданное число меньше!!!");
-        j1++;
-    }
-    if (a1 < 42)
-    {
-        Console.WriteLine("Загаданное число больше!!!");
-        j1++;
-    }
-    if (a1 == 42)
-    {
-        Console.WriteLine("Вы угадали число!!!!");
-        break;
-    }
-    a1 = Convert.ToInt32(Console.ReadLine());
+    y = y + z % 10;
+    z = z / 10;
 }
-if (j1 == 6)
-{
-    Console.WriteLine("Попытки кончились.");
-}
- 
+Console.WriteLine($"Cумма чисел:  {y}");
